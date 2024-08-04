@@ -79,28 +79,7 @@ def evaluate_model(model, validation_dataset):
 
 Use the provided app interface for predicting answers.
 
-```python
-import gradio as gr
-from transformers import pipeline
-
-# Load the QA pipeline
-qa_pipeline = pipeline("question-answering")
-
-def answer_question(question, context):
-    translated_context = translate_context(context)
-    result = qa_pipeline(question=question, context=translated_context)
-    return result["answer"]
-
-iface = gr.Interface(
-    fn=answer_question,
-    inputs=["text", "text"],
-    outputs="text",
-    title="Crosslingual QA Model",
-    description="Ask a question based on the given context",
-)
-
-iface.launch()
-```
+![The working app](https://github.com/natashapashupathi/Cross-Lingual-QA-System/blob/main/data/Screenshot%202024-08-04%20at%205.49.58%E2%80%AFPM.png)
 
 ## Contributing
 
