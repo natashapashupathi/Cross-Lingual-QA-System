@@ -16,16 +16,14 @@ This project aims to create a Question Answering (QA) system that can process Hi
 To get started with the project, clone the repository and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/yourusername/crosslingual-qa-project.git
-cd crosslingual-qa-project
-pip install -r requirements.txt
+git clone https://github.com/natashapashupathi/Cross-Lingual-QA-System/tree/main
 ```
 
 ## Usage
 
 1. **Data Preparation**: Convert the QA dataset from Hindi to English and adjust the answer start positions.
 
-2. **Training the Model**: Train the QA model with the prepared dataset.
+2. **Training the Model**: Train the QA model with a custom dataset.
 
 3. **Evaluation**: Evaluate the trained model to determine its performance.
 
@@ -33,61 +31,22 @@ pip install -r requirements.txt
 
 ### Data Preparation
 
-The data preparation involves translating the context from Hindi to English and adjusting the answer start positions using fuzzyword.
+The data preparation involves translating the context from Hindi to English using google translate and adjusting the answer start positions using fuzzyword.
 
-```python
-from googletrans import Translator
-import fuzzyword
-
-# Initialize the Google Translator
-translator = Translator()
-
-def translate_context(context):
-    translated = translator.translate(context, src='hi', dest='en')
-    return translated.text
-
-# Use fuzzyword to adjust answer start positions
-# Your code for fuzzyword implementation goes here
-```
 
 ### Training the Model
 
 Train the model in batches using the translated dataset.
 
-```python
-from transformers import pipeline
-
-# Load the QA pipeline
-qa_pipeline = pipeline("question-answering")
-
-def train_model(dataset):
-    # Your code for training the model goes here
-    pass
-```
-
 ### Evaluation
 
-Evaluate the model performance.
-
-```python
-def evaluate_model(model, validation_dataset):
-    # Your code for evaluating the model goes here
-    pass
-```
+Evaluate the model performance using accuracy and F1 scores.
 
 ### Prediction
 
-Use the provided app interface for predicting answers.
+Use the provided app interface for predicting answers. Here is an example of the working application
 
 ![The working app](https://github.com/natashapashupathi/Cross-Lingual-QA-System/blob/main/data/Screenshot%202024-08-04%20at%205.49.58%E2%80%AFPM.png)
-
-## Contributing
-
-We welcome contributions to improve this project. Feel free to submit issues or pull requests on the [GitHub repository](https://github.com/yourusername/crosslingual-qa-project).
-
-## License
-
-This project is licensed under the MIT License.
 
 ## Acknowledgments
 
