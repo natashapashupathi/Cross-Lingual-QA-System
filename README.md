@@ -36,7 +36,7 @@ The data preparation involves translating the context from Hindi to English usin
 
 ### Training the Model
 
-Train the model in batches using the translated dataset.
+Train the model in batches using the translated dataset. You will see an error in the notebook under the train session, this is because the training was done using google colab T4 GPU since training on the notebook was taking very long. The trained model was then loaded into the notebook.
 
 ### Evaluation
 
